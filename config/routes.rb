@@ -4,6 +4,7 @@ root "pages#home"
 get "about" => "pages#about"
 get "twilio" => "pages#twilio"
 devise_for :users
+post 'twilio/voice' => 'twilio#voice'
 
 
 
