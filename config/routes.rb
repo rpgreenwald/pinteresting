@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   resources :pins
 root "pages#home"
 get "about" => "pages#about"
-get "twilio" => "pages#twilio"
+get "demo" => "pages#demo"
 devise_for :users
 post 'twilio/voice' => 'twilio#voice'
+post 'twilio/status' => 'twilio#status'
+post 'notifications/notify' => 'notifications#notify'
 
 
 
