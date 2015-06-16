@@ -9,14 +9,9 @@ class CustomerServiceController < ApplicationController
      'id' => '123',
      'first_name' => 'Jane',
      'last_name' => 'Doe',
-     'city' => 'Carlsbad',
-     'state' => 'CA'
+     'city' => 'Seattle',
+     'state' => 'WA'
    )
-
-    capability = Twilio::Util::Capability.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token
-    capability.allow_client_outgoing Rails.application.secrets.twilio_twiml_app_sid
-    @token = capability.generate()
-
  end
  
 end
