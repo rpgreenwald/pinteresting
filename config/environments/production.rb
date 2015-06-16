@@ -81,4 +81,6 @@ Rails.application.configure do
    # Note to set this to your actual host name
   config.action_mailer.default_url_options = { :host => 'contextualcalling-demo.herokuapp.com' }
   # recommended on 2 time to use config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.middleware.use Rack::TwilioWebhookAuthentication, Rails.application.secrets.twilio_auth_token, '/voice'
 end

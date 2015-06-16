@@ -7,7 +7,8 @@ devise_for :users
 post 'twilio/voice' => 'twilio#voice'
 post 'twilio/status' => 'twilio#status'
 post 'notifications/notify' => 'notifications#notify'
-
+get 'customer_service/agent' => 'customer_service#agent'
+post 'twilio/connect_customer' => 'twilio#connect_customer'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
